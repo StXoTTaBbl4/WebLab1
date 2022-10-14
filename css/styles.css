@@ -1,0 +1,77 @@
+/*наследование стилей*/
+div{
+    margin: 10px;
+    font-size: 20px;
+}
+
+/*селекот идентификатора*/
+#header, #footer{ 
+    background-color: #ccc;
+    color: black;
+    font-size: medium;
+    font-family: serif;
+    text-align: center;
+}
+
+#footer{
+    background-color: #ccc;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    border-top: 1px solid white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#leftSidebar{
+    float: left;
+    width: 420px;
+    height: 500px;
+}
+
+#rightSidebar{
+    float: right;
+    width: 550px;
+    height: 500px;
+}
+
+table{
+    padding: 15px;
+    overflow-y: auto;
+}
+
+#main{
+    height: 500px;
+    margin-left: 440px;
+    margin-right: 570px;
+}
+
+/*селектор потомств*/
+#main p{
+    font-family: cursive;
+}
+
+#results{
+    width: 550px;
+    height: 300px;
+    overflow-y: scroll;
+    resize: none;
+}
+
+/*селектор классов*/
+.validate_form{
+    margin-left: 1%;
+}
+
+/*селекторы атрибутов*/
+input[type="submit"]{
+    color: green;
+}
+input[class="reset_button"]{
+    color: red;
+}
+ 

@@ -1,0 +1,96 @@
+<!-- Вариант 7600-->
+<!--  python -m http.server 9003 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <!---->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <!---->  
+    <title>Web, Lab#1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div id="header"><h2>Румский Александр Максимович<br>P32121<br>Вариант #7600</h2></div>
+
+    <div id="leftSidebar">
+        <img src="img/areas.png">
+    </div>
+
+    <div id="rightSidebar">
+        <label>Results:</label></br>
+        <table id="results" border="1" cellpadding="0" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+            <th>X</th>
+            <th>Y</th>
+            <th>R</th>
+            <th>Hit</th>
+            <th>Time</th>
+            <th>Exec.time</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="main" class="data">
+    <label>Parameters:</label>
+    <fieldset class="f_data">
+    <form id="info" class="validate_form" action="php/server.php">    
+        <p>
+            <label for="X">X:</label>
+            <select id="X" name="x_value" class="x_selector">
+                <option value=-5 id="x_-5" class="x">-5</option>
+                <option value=-4 id="x_-4" class="x">-4</option>
+                <option value=-3 id="x_-3" class="x">-3</option>
+                <option value=-2 id="x_-2" class="x">-2</option>
+                <option value=-1 id="x_-1" class="x">-1</option>
+                <option value=-0 id="x_0" class="x">0</option>
+                <option value=1 id="x_1" class="x">1</option>
+                <option value=2 id="x_2" class="x">2</option>
+                <option value=3 id="x_3" class="x">3</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="Y" id="y_n">Y:</label>
+            <input name="y_value" class="y" id="Y"  type="number" placeholder="-5...3" step="any" size="2" max="3.0" min="-5.0" value="0" checked/> 
+        </p>
+
+        <p>
+            <label>R:</label>
+            <input type="radio" id="1" name="r_value" class="r" value=1 checked>
+            <label for="1">1</label>
+               
+            <input type="radio" id="1.5" name="r_value" class="r" value=1.5>
+            <label for="1.5">1.5</label>
+               
+            <input type="radio" id="2" name="r_value" class="r" value=2>
+            <label for="2">2</label>
+
+            <input type="radio" id="2.5" name="r_value" class="r" value=2.5>
+            <label for="2.5">2.5</label>
+
+            <input type="radio" id="3" name="r_value" class="r" value=3>
+            <label for="3">3</label>
+        </p>
+
+        <p>
+            <input type="submit" name="XYR" class="validate_button" value="Validate"/>
+            <input type="submit" name="reset" class="reset_button" value="Reset"/>
+        </p>
+
+    </form>    
+    </fieldset>
+    </div>
+
+    <div id="footer">September, 2022<br> All rights not reserved</div>
+    <script src="js/lib/jquery-3.6.1.min.js"></script>
+    <script src="js/client.js" ></script>
+</body>
+</html>
